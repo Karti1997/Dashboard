@@ -1,0 +1,8 @@
+<div style="margin-left: 120px" class="flexbox-container">
+<app-widget-dualaxis title="Monthly Average Usage by each Department" [categories]="month" yaxis="Number of Books Issue" [series]="data"></app-widget-dualaxis>
+<app-widget-funnel title="Book flow" subtitle="" [categories]="Month" yaxis="members"  [series]="Bookflowdata"  ></app-widget-funnel>
+</div >
+<div style="margin-left: 120px" class="flexbox-container" >
+    <app-widget-funnel title="Scholarship for book lending" subtitle="Lending books" [categories]="Month" yaxis="members"  [series]="scholorshipdata"  ></app-widget-funnel>
+    <app-widget-tilemap></app-widget-tilemap>
+</div>

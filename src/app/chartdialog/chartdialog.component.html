@@ -1,0 +1,50 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+  <form novalidate [formGroup]="feedbackForm" #fform="ngForm" (ngSubmit)="onSubmit()">
+    <p> {{heading}}</p>
+  <p class="full-width" style="display: block;">
+      <mat-select placeholder="Select Chart" formControlName="charttype">
+        <mat-option *ngFor="let ctype of chartType" [value]="ctype">
+          {{ ctype }}
+        </mat-option>
+      </mat-select>
+  </p>
+  <p class="full-width">
+    <mat-form-field >
+        <input matInput formControlName="title" placeholder="Chart Title" type="text" required>
+        <mat-error *ngIf="formErrors.title">{{formErrors.firstname}}</mat-error>
+    </mat-form-field>
+  </p>
+  <p class="full-width">
+      <mat-form-field >
+        <input matInput formControlName="subtitle" placeholder="Enter any Description" type="text" >
+      </mat-form-field>
+  </p>
+  <p class="full-width">
+      <mat-form-field >
+        <input matInput formControlName="yaxis" placeholder="Value for Y axis" type="text" required>
+        <mat-error *ngIf="formErrors.yaxis">{{formErrors.yaxis}}</mat-error>
+      </mat-form-field>
+  </p>
+  <p class="full-width">
+    <mat-select placeholder="Xaxis" formControlName="xaxis">
+      <mat-option *ngFor="let ctype of Xaxisvalues" [value]="ctype.value">
+        {{ ctype.name }}
+      </mat-option>
+    </mat-select>
+  </p>
+    <!--table class="form-size">
+      <td>
+        <mat-slide-toggle formControlName="table">May we contact you?</mat-slide-toggle>
+      </td>
+      <td>
+    </table-->
+  <p class="full-width">
+      <mat-select placeholder="Choose your data" formControlName="message">
+        <mat-option *ngFor="let ctype of Data" [value]="ctype.value">
+          {{ ctype.name }}
+        </mat-option>
+      </mat-select>
+  </p>
+    <button type="submit" mat-button class="background-primary text-floral-white">Submit</button>
+  </form>
+</div>

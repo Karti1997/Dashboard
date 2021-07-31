@@ -1,0 +1,61 @@
+<mat-toolbar color="primary">
+    Book Name: {{book.name}}
+  <span  fxflex="80"></span>
+  <button class="menu-spacer" mat-button mat-dialog-close>&times;</button>
+</mat-toolbar>
+
+
+   
+    
+    <ul class="under">
+      <li class="list">ISSUE DATE: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{book.issuedate| date: medium }}</li>
+      <li class="list">RETURN DATE: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{book.returndate| date: medium }}</li>
+      <li class="list">FINE AMOUNT PER DAY:&nbsp;&nbsp;&nbsp;RS.{{fine}}</li>
+      <li class="list">TOTAL FINE:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RS.{{amt}}</li>
+      <!--li class="list">List item 5</li-->
+      <li class="list" id="strength" #strength>  
+        <small>{{duestatus}}</small>  
+        <ul id="strengthBar">  
+            <li class="point" [style.background-color]="bar0"></li>
+            <li class="point" [style.background-color]="bar1"></li>
+            <li class="point" [style.background-color]="bar2"></li>
+            <li class="point" [style.background-color]="bar3"></li>
+            <li class="point" [style.background-color]="bar4"></li>  
+        </ul>  
+      </li> 
+    </ul>
+
+    <!--div id='container'>
+      <div>
+        <span >{{book.issuedate| date: 'd/M/y' }}</span>
+            <mat-slider 
+            thumbLabel
+            [displayWith]="formatLabel"
+            min="1"
+            max="5">
+          </mat-slider>
+        <span >{{book.returndate| date: 'd/M/y' }}</span>
+      </div>
+    </div-->
+    <!--formControlName="rate"-->
+    
+<!--form novalidate #loginForm="ngForm" (ngSubmit)="onSubmit()">
+
+  <mat-dialog-content>
+    <p>
+      <mat-form-field>
+        <input matInput placeholder="Username" type="text" [(ngModel)]="user.username" name="username"  #username="ngModel" required>
+        <mat-error *ngIf="username.errors?.required">Username is required</mat-error>
+    </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Password" type="password" [(ngModel)]="user.password" name="password"  #password="ngModel" required>
+        <mat-error *ngIf="password.errors?.required">Password is required</mat-error>
+    </mat-form-field>
+    </p>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <span class="flex-spacer"></span>
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button type="submit" mat-button class="background-primary text-floral-white" [disabled]="loginForm.form.invalid">Login</button>
+  </mat-dialog-actions>
+</form-->

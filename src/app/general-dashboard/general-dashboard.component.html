@@ -1,0 +1,57 @@
+<div class="flexbox-container">
+  <mat-card >
+    <app-widget-card label=" National Journals" total="254" percentage="20"></app-widget-card>
+  </mat-card>
+  <mat-card >
+    <app-widget-card label="Internation Journals" total="10" percentage="9.8"></app-widget-card>
+  </mat-card>
+  <mat-card >
+    <app-widget-card label="E-Databases" total="13" percentage="12"></app-widget-card>
+  </mat-card>
+  <mat-card >
+    <app-widget-card label="Lending Books" total="158346" percentage="55"></app-widget-card>
+  </mat-card>
+  <mat-card >
+    <app-widget-card label="Reference Books" total="23973" percentage="15"></app-widget-card>
+  </mat-card>
+  <mat-card >
+    <app-widget-card label="Back Volumes" total="32753" percentage="20"></app-widget-card>
+  </mat-card>
+</div>
+  <br>
+  <mat-divider></mat-divider>
+  <br>
+<div class="flexbox-container">
+	<div>
+    <app-widget-area title="'Growth of BOOK Count over years'" subtitle="'Main Library'" [categories]="years" yaxis="Number of books" [series]="data"></app-widget-area>
+    </div>
+	<div>
+        <app-widget-pie title="Facilities Provided" [series]="facilitydata"></app-widget-pie>
+    </div>
+</div>
+  <br>
+  
+  <mat-divider></mat-divider>
+  
+  <br>
+  <br>
+  <footer>
+    <span>
+    Monday to Friday   08:30 AM to 09:00 PM       Sundays & Holidays	08:30 AM to 01:00 PM
+    </span>
+    <br>
+    <br>
+    &copy; All Rights reserved JR 2020
+  </footer>
+
+  <!--div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px"><br>
+  <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">Table</div><br>
+  <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px"><br>
+      <app-widget-pie></app-widget-pie>
+  </div>
+  </div>
+  
+  <br>
+  <br>
+  <br-->
+  

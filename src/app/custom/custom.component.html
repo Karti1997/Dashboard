@@ -1,0 +1,12 @@
+<div class="example-box" [ngSwitch]="this.chartdetail.charttype" cdkDrag  >
+    <app-widget-stacked-column *ngSwitchCase="'stacked-column'" [title]="this.chartdetail.title" [subtitle]="this.chartdetail.subtitle" [categories]="this.chartdetail.xaxis" [yaxis]="members"  [series]="data3"></app-widget-stacked-column>
+    <app-widget-column *ngSwitchCase="'Column'" [title]="this.chartdetail.title" [categories]="this.chartdetail.xaxis" [yaxis]="this.chartdetail.yaxis" [series]="data3" [colors]="colors"  ></app-widget-column>
+    <app-widget-doughnut *ngSwitchCase="'Doughnut'" [title]="this.chartdetail.title" [yaxis]="this.chartdetail.yaxis" [series]="data3"></app-widget-doughnut>
+    <app-widget-dualaxis *ngSwitchCase="'Dual-axis'" [title]="this.chartdetail.title" [categories]="this.chartdetail.xaxis" [yaxis]="this.chartdetail.yaxis" [series]="this.chartdetail.message"></app-widget-dualaxis>
+    <app-widget-gauge *ngSwitchCase="'Gauge'" [title]="this.chartdetail.title" members="8" status="crowded"></app-widget-gauge>
+    <app-widget-area *ngSwitchCase="'Area'" [title]="this.chartdetail.title" [subtitle]="this.chartdetail.subtitle" [categories]="this.chartdetail.xaxis" [yaxis]="this.chartdetail.yaxis" [series]="this.chartdetail.message"></app-widget-area>
+    <app-widget-pie *ngSwitchCase="'Pie'" [title]="this.chartdetail.title" [series]="data3"></app-widget-pie>
+    <button *ngSwitchDefault mat-fab color="primary" (click)="addchart()">
+        <mat-icon>add</mat-icon>
+    </button>
+</div>

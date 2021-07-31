@@ -1,0 +1,19 @@
+<div class="flexbox-container">
+    <div >
+      <app-widget-column title="Monthly Average Visitors" [categories]="Month" yaxis="members" [series]="data" [colors]="colors" ></app-widget-column>
+    </div>
+    <div>
+      <app-widget-column title="Daily Average Visitors" [categories]="Time" yaxis="members" [series]="data1" [colors]="colors1" ></app-widget-column>
+    </div>
+    <div>
+      <app-widget-column [title]="hour" [categories]="Members" yaxis="members" [series]="data2" [colors]="colors2"  ></app-widget-column>
+    </div>
+  </div>
+  <div class="flexbox-container">
+    <div >
+      <app-widget-stacked-column title="Monthly Average Visitors" subtitle="categorised by Department" [categories]="Month" yaxis="members"  [series]="data3"  ></app-widget-stacked-column>
+    </div>
+    <div>
+      <app-widget-stacked-column title="Monthly Average Visitors" subtitle="categorised by Role" [categories]="Month" yaxis="members" [series]="data4"  ></app-widget-stacked-column>
+    </div>
+  </div>

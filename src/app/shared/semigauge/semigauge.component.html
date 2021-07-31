@@ -1,0 +1,7 @@
+<mat-toolbar color="primary">
+    Fine status
+  <span  fxflex="80"></span>
+</mat-toolbar>
+<ul class="under" *ngFor="let book of Fineamt">
+    <li class="list">{{book.name}}: &nbsp;Rs.{{book.amount}}</li>
+</ul>

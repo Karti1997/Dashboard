@@ -1,0 +1,13 @@
+<div class="flexbox-container">
+    <div >
+      <app-widget-dualaxis title='Monthly Average usage of Ebooks and Printed books' [categories]="month" yaxis="'Number of books taken/download'" [series]="ebookdata"></app-widget-dualaxis>
+    </div>
+    <div>
+        <app-widget-pie title="Book Categories" [series]="bookdata"></app-widget-pie>
+    </div>
+  </div>
+  <!--div class="flexbox-container" style="align-items: center;"-->
+    <div style="width: 75%;margin-left: 120px;">
+      <app-widget-stacked-column title="Used and Unused books Comparison" subtitle="categorised by Role" [categories]="books" yaxis="Number of Books" [series]="data"  ></app-widget-stacked-column>
+    </div>
+  <!--/div-->
